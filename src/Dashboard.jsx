@@ -1,5 +1,8 @@
 import React from 'react'
 import tokyo from './assets/tokyo.webp'
+import aeroplane from './assets/aeroplane.webp'
+import DragScroll from './DragScroll'
+import DragScrollDate from './DragScrollDate'
 
 function Dashboard() {
   return (
@@ -25,7 +28,7 @@ function Dashboard() {
             <div className="relative w-fit">
                 <img src={tokyo} className="rounded-2xl" />
 
-                {/* Smooth bottom blur */}
+                
                 <div
                     className="absolute inset-0 rounded-2xl pointer-events-none overflow-hidden backdrop-blur-xl"
                     style={{
@@ -118,7 +121,81 @@ function Dashboard() {
 
             </div>
 
-            
+            <div className='pt-4 '>
+                <div className='h-[124px] w-[285px] bg-[#3643FB] rounded-2xl flex justify-center items-center font-mont text-white relative' >
+                    <div className='h-[112px] w-[270px] bg-[#313DDF] rounded-2xl pl-2'>
+                        <div className=' flex justify-between '>
+                            <div>
+                                <h1 className='text-base'>Flight Details</h1>
+                                <h1 className='text-xs'>26.01.2025, 10:50 am</h1>
+                            </div>
+                            <div className='pr-2'>
+                                <h1 className='text-xs underline text-[#D1F462]'>See all</h1>
+                            </div>
+                        </div>
+                        <div className='flex pt-7 gap-2'>
+                            <div>
+                                <h1 className='text-base'>DEL</h1>
+                                <h1 className='text-xs'>Delhi, India</h1>
+                            </div>
+
+                            <div className='flex justify-center items-center'>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve" stroke="#ffffff">
+
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+                                <g id="SVGRepo_iconCarrier"> <path id="XMLID_27_" d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255 s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0 c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"/> </g>
+
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h1 className='text-base'>NRT</h1>
+                                <h1 className='text-xs'>Narita, Tokyo</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src={aeroplane} alt="" srcset="" className='absolute top-0 h-28 right-[0.7px]' />
+
+
+                </div>
+
+                
+            </div>
+
+            <div className='pt-4 font-mont text-white flex items-center justify-around gap-11'>
+                    <h1 className='text-xl'>
+                    Accomodation
+                    </h1>
+                    <h1 className='text-xs underline text-[#D1F462]'>See all</h1>
+            </div>
+            <div className='pt-4'>
+                    <DragScroll/>
+            </div>
+
+            <div className='pt-4 font-mont text-white flex items-center justify-around gap-11'>
+                    <h1 className='text-xl'>
+                    Activities
+                    </h1>
+                    <h1 className='text-xs underline text-[#D1F462]'>See all</h1>
+            </div>
+
+            <div className='h-[130px] w-[300px] bg-[#333333] rounded-2xl font-mont p-4'>
+                    <div className='flex items-center gap-2'>
+                        <div className='inline-block rounded-lg px-4 py-2 bg-[#D3F462] text-[#333333] font-semibold'> 
+                            <h1 className='text-[10px]'>Day Plan</h1>
+                        </div>
+                        <div>
+                            <h1 className='text-[#D3F462] bg-[#292929] border border-[#D3F462] rounded-lg px-4 py-2 text-[10px]'>14 Activities</h1>
+                        </div>
+                    </div>
+                    <div>
+                    <DragScrollDate/>
+                    </div>
+            </div>  
         </div>
     </div>
   )

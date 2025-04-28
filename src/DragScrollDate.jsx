@@ -1,0 +1,59 @@
+import React, { useRef, useState } from "react";
+import HotelCard from "./HotelCard";
+
+const DragScroll = () => {
+  const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // adjust speed
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  return (
+    <div
+      ref={scrollRef}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+      className="overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab"
+      style={{
+        width: "100%",
+        userSelect: "none",
+      }}
+    >
+      <div className="flex m-2">
+        <div className=" w-14 h-12 mt-2  font-mont bg-[#D3F462] -rotate-90 flex justify-center items-center text-[#0B0809] font-semibold rounded-t-2xl">
+          <h1>JAN</h1>
+        </div>
+        <div className="w-14 h-12 mt-2  font-mont font-medium text-white border border-[#D3F462]">
+          <h1>MON</h1>
+          <h1>27</h1>
+        </div>
+      </div>
+    </div>
+
+  );
+};
+
+export default DragScroll;
