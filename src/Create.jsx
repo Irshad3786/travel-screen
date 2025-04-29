@@ -159,7 +159,7 @@ function Create() {
           </div>
         </div>
 
-        <div className='px-2 pt-32 '>
+        <div className='px-10 pt-32 '>
         <Link to="/Dashboard">
           <button className='w-[300px] h-[44px] bg-[#3643FB] rounded-md font-mont text-white font-semibold'>Continue</button>
           </Link>
