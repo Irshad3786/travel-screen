@@ -3,12 +3,13 @@ import tokyo from './assets/tokyo.webp'
 import aeroplane from './assets/aeroplane.webp'
 import DragScroll from './DragScroll'
 import DragScrollDate from './DragScrollDate'
+import hotelone from './assets/hotel-2.jpg'
 
 function Dashboard() {
   return (
     <div className='bg-w-full min-h-screen bg-black'>
-        <div className='mx-1 px-2'>
-            <div className='flex justify-between'>
+        <div className='mx-1 px-2 py-8'>
+            <div className='flex justify-between sm:justify-center sm:gap-96'>
 
             <div className='font-mont text-white pt-3 '>
                 <h1 className='font-semibold text-xl'>Hello Chhavi!</h1>
@@ -21,11 +22,12 @@ function Dashboard() {
             </div>
 
             <div className='font-mont text-white pt-5'>
-                <h1>Your Upcoming Trip</h1>
+                <h1 className='sm:text-center'>Your Upcoming Trip</h1>
             </div>
-            <div className='w-72 h-56 pt-4 relative'>
-               
-            <div className="relative w-fit">
+
+        <div className='sm:flex sm:justify-center sm:gap-20 sm:items-center'>
+            <div className='w-72 h-56 pt-4 relative '>
+            <div className="relative w-fit ">
                 <img src={tokyo} className="rounded-2xl" />
 
                 
@@ -165,25 +167,26 @@ function Dashboard() {
 
                 
             </div>
+            </div>
 
-            <div className='pt-4 font-mont text-white flex items-center justify-around gap-11'>
+            <div className='pt-4 font-mont text-white flex items-center justify-around gap-11 sm:gap-16 sm:justify-center'>
                     <h1 className='text-xl'>
                     Accomodation
                     </h1>
                     <h1 className='text-xs underline text-[#D1F462]'>See all</h1>
             </div>
-            <div className='pt-4'>
+            <div className='pt-4 sm:flex sm:justify-center sm:items-center'>
                     <DragScroll/>
             </div>
 
-            <div className='pt-4 font-mont text-white flex items-center justify-around gap-11'>
+            <div className='pt-4 font-mont text-white flex items-center justify-around gap-11 sm:gap-16 sm:justify-center'>
                     <h1 className='text-xl'>
                     Activities
                     </h1>
                     <h1 className='text-xs underline text-[#D1F462]'>See all</h1>
             </div>
-
-            <div className='h-[130px] w-[300px] bg-[#333333] rounded-2xl font-mont p-4'>
+            <div className='sm:flex sm:justify-center sm:items-center'>
+            <div className='h-[130px] w-[300px] sm:w-[650px] bg-[#333333] rounded-2xl font-mont p-4'>
                     <div className='flex items-center gap-2'>
                         <div className='inline-block rounded-lg px-4 py-2 bg-[#D3F462] text-[#333333] font-semibold'> 
                             <h1 className='text-[10px]'>Day Plan</h1>
@@ -195,9 +198,74 @@ function Dashboard() {
                     <div>
                     <DragScrollDate/>
                     </div>
-            </div>  
+            </div>
+            </div>
+            <div className='sm:flex sm:justify-center sm:items-center'>  
+            <div className='flex items-center pt-4 gap-2'>
+            
+            
+
+            <div className=' font-mont text-black flex items-center  '>
+                <div className='flex justify-center items-center gap-4 text-sm bg-[#D3F462] px-2 rounded-xl py-1 font-semibold'>
+                    <h1 className='text-sm'>
+                    Day 1 
+                    </h1>
+                    <h1>
+                    27.01.2025
+                    </h1>
+                </div>
+                
+            </div>
+
+                <div className='flex '>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 24 24">
+                    <path fill="none" stroke="#D3F462" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18 10l-3 1.5l-4-3l-1 5.5l3.5 3l.5 4.5m4-13v13M10 17l-2 4.5m.5-13C7 9.5 6 12 6 12l2 1m4-6.5a2 2 0 1 0 0-4a2 2 0 0 0 0 4"/>
+                    </svg>
+                    </div>
+
+                    <div>
+                        <h1 className='text-[#D3F462]'>3 Activities</h1>
+                    </div>
+                
+                </div>
+            </div>
+            </div>
+
+            <div className='border border-[#D3F462] mt-3 rounded-2xl px-2 py-2 
+                space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:items-center sm:gap-5'>
+                <div className='flex'>
+                    <img src={hotelone} className='h-32 w-24 rounded-l-lg object-cover' />
+                    <div className='w-[300px] h-32 bg-[#4D4D4D] rounded-e-lg text-white font-mont text-[12px] py-3 px-2'>
+                        <h1>Senso-ji Temple & Nakamise Shopping Street Senso-ji</h1>
+                        <h1>Timing: <span>8:15 am Morning</span></h1>
+                        <h1>Duration: <span>3 hours</span></h1>
+                        <h1>Pick up: <span>From Hotel</span></h1>
+                    </div>
+                </div>
+
+
+                <div className='flex'>
+                    <img src={hotelone} className='h-32 w-24 rounded-l-lg object-cover' />
+                    <div className='w-[300px] h-32 bg-[#4D4D4D] rounded-e-lg text-white font-mont text-[12px] py-3 px-2'>
+                        <h1>Senso-ji Temple & Nakamise Shopping Street Senso-ji</h1>
+                        <h1>Timing: <span>8:15 am Morning</span></h1>
+                        <h1>Duration: <span>3 hours</span></h1>
+                        <h1>Pick up: <span>From Hotel</span></h1>
+                    </div>
+                </div>
+
+                <div className='flex'>
+                    <img src={hotelone} className='h-32 w-24 rounded-l-lg object-cover' />
+                    <div className='w-[300px] h-32 bg-[#4D4D4D] rounded-e-lg text-white font-mont text-[12px] py-3 px-2'>
+                        <h1>Senso-ji Temple & Nakamise Shopping Street Senso-ji</h1>
+                        <h1>Timing: <span>8:15 am Morning</span></h1>
+                        <h1>Duration: <span>3 hours</span></h1>
+                        <h1>Pick up: <span>From Hotel</span></h1>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </div>  
   )
 }
 

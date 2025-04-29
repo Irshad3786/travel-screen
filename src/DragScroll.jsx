@@ -36,12 +36,18 @@ const DragScroll = () => {
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      className="overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab"
+      className="overflow-x-auto overflow-y-hidden whitespace-nowrap cursor-grab w-[100%] sm:w-[50%]"
       style={{
-        width: "100%",
+        
         userSelect: "none",
       }}
     >
+        <HotelCard/>
+        <HotelCard/>
+        <HotelCard/>
+        <HotelCard/>
+        <HotelCard/>
+        <HotelCard/>
         <HotelCard/>
         <HotelCard/>
         <HotelCard/>

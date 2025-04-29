@@ -11,7 +11,7 @@ function HotelCard() {
                 <h1>Check in: 26.01.2025, 11:15 pm</h1>
                 <h1>Check in: 28.01.2025, 11:15 am</h1>
             </div>
-            <div className='bg-[#4D4D4D] rounded-b-2xl flex justify-around gap-11 p-41'>
+            <div className='bg-[#4D4D4D] rounded-b-2xl flex justify-around gap-11 p-4 '>
                 <h1 className='text-sm'>2 Nights</h1>
                 <div className='flex gap-3'>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#90EB61" version="1.1" id="Capa_1" width="20px" height="20px" viewBox="0 0 400 400" xml:space="preserve" stroke="#fafafa">
